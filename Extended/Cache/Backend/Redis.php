@@ -121,6 +121,14 @@ class Extended_Cache_Backend_Redis extends Zend_Cache_Backend implements Zend_Ca
     }
 
     /**
+     * @return null|Redis
+     */
+    public function getRedis()
+    {
+        return $this->_redis;
+    }
+
+    /**
      * Returns status on if cache backend is connected to Redis
      *
      * @return bool true if cache backend is connected to Redis server.
